@@ -25,4 +25,16 @@ rAvgSol( 10 )
 ### Barbones JS AJAX
 ```javascript
 
+var xhr = new XMLHttpRequest()
+
+xhr.open( 'GET', 'www.someapi.com/theirapi' )
+xhr.send()
+
+xhr.addEventListener( 'load', callback )
+
+function callback() {
+    if ( this.status < 200 && this.status >= 400 && this.readyState !== 1 ) return
+    console.log( this.responseText )
+    console.log( JSON.parse( this.responseText ) )
+}
 ```
