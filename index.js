@@ -10,3 +10,12 @@ function runningAverage() {
 
 var rAvgSol = runningAverage();
 rAvgSol( 10 )
+
+//==========================================
+//==========================================
+//==========================================
+
+var xhr = new XMLHttpRequest()
+
+xhr.open( 'GET', 'www.someapi.com/theirapi' )
+xhr.send()
