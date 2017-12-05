@@ -1,8 +1,3 @@
-# Notes and Daily Commits
-
-
-### Closure Javascript
-```javascript
 function runningAverage() {
     let count = 0
     let accu = 0
@@ -15,7 +10,3 @@ function runningAverage() {
 
 var rAvgSol = runningAverage();
 rAvgSol( 10 )
-```
-
-* vars count and accu are in the scope of the outer function
-* its like a higher order function, accumulator pattern
