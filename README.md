@@ -1,6 +1,11 @@
 # Notes and Daily Commits
 
 
+jQuery CDN
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+```
+
 ### Closure Javascript
 ```javascript
 function runningAverage() {
@@ -24,7 +29,6 @@ rAvgSol( 10 )
 
 ### Barbones JS AJAX
 ```javascript
-
 var xhr = new XMLHttpRequest()
 
 xhr.open( 'GET', 'www.someapi.com/theirapi' )
