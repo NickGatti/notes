@@ -42,3 +42,19 @@ function callback() {
     console.log( JSON.parse( this.responseText ) )
 }
 ```
+
+### Check if variable is Object
+```
+let obj;
+if ( obj.constructor === Object ) return true
+```
+
+### Check Object contents length
+```
+if (Object.keys( postObj ).length === 0 ) return 'empty'
+```
+
+### Check if Array is Array
+```
+if (Array.isArray(theArray)) return true
+```
