@@ -174,3 +174,31 @@ app.use('/api', router);
 app.listen(port);
 console.log('Magic happens on port ' + port);
 ```
+
+### Where is this? This is in its parent scope!
+
+```javascript
+
+function getInfo() {
+  $.get('www.api.com/api', run)
+}
+
+function run() {
+  console.log(this)
+  //THIS IS IN GET INFO!!!
+}
+```
+
+### Where is this? Fat Arrow Function! This is in its own scope!
+
+```javascript
+
+let run = () => {
+  console.log(this)
+  //THIS IS HERE IN RUN!!!
+}
+
+function getInfo() {
+  $.get('www.api.com/api', run)
+}
+```
