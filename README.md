@@ -44,17 +44,38 @@ function callback() {
 ```
 
 ### Check if variable is Object
-```
+```javascript
 let obj;
 if ( obj.constructor === Object ) return true
 ```
 
 ### Check Object contents length
-```
-if (Object.keys( postObj ).length === 0 ) return 'empty'
+```javascript
+let obj;
+if (Object.keys( obj ).length === 0 ) return 'empty'
 ```
 
 ### Check if Array is Array
-```
+```javascript
+let theArray;
 if (Array.isArray(theArray)) return true
+```
+
+### What the callback?
+```javascript
+
+var xhr = new XMLHttpRequest()
+xhr.addEventListener( 'load', callback )
+
+getInfo()
+
+function getInfo() {
+  xhr.open( 'GET', 'www.someapi.com/theirapi' )
+  xhr.send()
+}
+
+function callback() {
+    if ( this.status < 200 && this.status >= 400 && this.readyState !== 1 ) return
+    getInfo()
+}
 ```
