@@ -61,7 +61,7 @@ let theArray;
 if (Array.isArray(theArray)) return true
 ```
 
-### What the callback?
+### What the callback? Keep callin'
 ```javascript
 
 var xhr = new XMLHttpRequest()
@@ -77,5 +77,25 @@ function getInfo() {
 function callback() {
     if ( this.status < 200 && this.status >= 400 && this.readyState !== 1 ) return
     getInfo()
+}
+```
+
+
+### What the callback? Keep callin' -MINUS SPAM
+```javascript
+
+var xhr = new XMLHttpRequest()
+xhr.addEventListener( 'load', callback )
+
+getInfo()
+
+function getInfo() {
+  xhr.open( 'GET', 'www.someapi.com/theirapi' )
+  xhr.send()
+}
+
+function callback() {
+    if ( this.status < 200 && this.status >= 400 && this.readyState !== 1 ) return
+    setTimeout(getinfo, 5000)
 }
 ```
