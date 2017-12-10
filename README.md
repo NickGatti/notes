@@ -218,15 +218,15 @@ Parameters
 callback
 Function that produces an element of the new Array, taking three arguments:
 
-currentValue
-The current element being processed in the array.
-indexOptional
-The index of the current element being processed in the array.
-arrayOptional
-The array map was called upon.
-thisArgOptional
-Value to use as this when executing callback.
-Return value
+* currentValue
+* The current element being processed in the array.
+* index Optional
+* The index of the current element being processed in the array.
+* array Optional
+* The array map was called upon.
+* thisArg Optional
+* Value to use as this when executing callback.
+* Return value
 
 A new array with each element being the result of the callback function.
 
