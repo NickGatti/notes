@@ -202,3 +202,39 @@ function getInfo() {
   $.get('www.api.com/api', run)
 }
 ```
+
+## Higher Order Functions:
+
+### Map
+#### Return the same length array filled with results based on conditions from the original array
+```javascript
+var new_array = arr.map(function callback(currentValue, index, array) {
+    // Return element for new_array
+}[, thisArg])
+```
+
+Parameters
+
+callback
+Function that produces an element of the new Array, taking three arguments:
+
+currentValue
+The current element being processed in the array.
+indexOptional
+The index of the current element being processed in the array.
+arrayOptional
+The array map was called upon.
+thisArgOptional
+Value to use as this when executing callback.
+Return value
+
+A new array with each element being the result of the callback function.
+
+Source MDN
+
+```javascript
+let arr = [1, 2, 3, 4, 5]
+let func = () => arr.map( (data) => {
+    return data > 1 ? 'Higher than one' : 'Lower than one'
+} )
+```
