@@ -205,8 +205,11 @@ function getInfo() {
 
 ## Higher Order Functions:
 
+## Arrays:
+
 ### Map
 #### Return the same length array filled with results based on conditions from the original array
+
 ```javascript
 var new_array = arr.map(function callback(currentValue, index, array) {
     // Return element for new_array
@@ -219,16 +222,24 @@ callback
 Function that produces an element of the new Array, taking three arguments:
 
 * currentValue
+
  The current element being processed in the array.
+
 * index Optional
+
  The index of the current element being processed in the array.
+
 * array Optional
+
  The array map was called upon.
+
 * thisArg Optional
+
  Value to use as this when executing callback.
+
 * Return value
 
-A new array with each element being the result of the callback function.
+ A new array with each element being the result of the callback function.
 
 Source MDN
 
@@ -238,3 +249,39 @@ let func = () => arr.map( (data) => {
     return data > 1 ? 'Higher than one' : 'Lower than one'
 } )
 ```
+> Output is ['Lower than one', 'Higher than one', 'Higher than one', 'Higher than one', 'Higher than one']
+
+### Filter
+#### Return an array of results based on the conditions of the original array
+
+```javascript
+var newArray = arr.filter(callback[, thisArg])
+```
+
+* callback
+Function is a predicate, to test each element of the array. Return true to keep the element, false otherwise, taking three arguments:
+
+* element
+
+The current element being processed in the array.
+
+* index
+
+The index of the current element being processed in the array.
+
+* array
+
+The array filter was called upon.
+
+* thisArg Optional
+
+Optional. Value to use as this when executing callback.
+
+```javascript
+let arr = [1, 2, 3, 4, 5]
+let func = (data, ele) => {
+  if (ele > 1) return data
+}
+```
+
+> Output is [2, 3, 4, 5]
