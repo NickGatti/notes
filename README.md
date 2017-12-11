@@ -245,9 +245,14 @@ Source MDN
 
 ```javascript
 let arr = [1, 2, 3, 4, 5]
-let func = () => arr.map( (data) => {
+
+let myFunc = () => {
+  return arr.map( (data) => {
     return data > 1 ? 'Higher than one' : 'Lower than one'
-} )
+  } )
+}
+
+myFunc()
 ```
 > Output is ['Lower than one', 'Higher than one', 'Higher than one', 'Higher than one', 'Higher than one']
 
@@ -290,4 +295,4 @@ myFunc()
 });
 ```
 
-> Output is [3, 4, 5]
+> Output is [2, 3, 4, 5]
