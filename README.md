@@ -45,25 +45,24 @@ function callback() {
 
 ### Check if variable is Object
 ```javascript
-let obj;
+let obj = {}
 if ( obj.constructor === Object ) return true
 ```
 
 ### Check Object contents length
 ```javascript
-let obj;
+let obj = {}
 if (Object.keys( obj ).length === 0 ) return 'empty'
 ```
 
 ### Check if Array is Array
 ```javascript
-let theArray;
+let theArray []
 if (Array.isArray(theArray)) return true
 ```
 
 ### What the callback? Keep callin'
 ```javascript
-
 var xhr = new XMLHttpRequest()
 xhr.addEventListener( 'load', callback )
 
@@ -95,7 +94,7 @@ function getInfo() {
 
 function callback() {
     if ( this.status < 200 && this.status >= 400 && this.readyState !== 1 ) return
-    setTimeout(getinfo, 5000)
+    setTimeout(getInfo, 5000)
 }
 ```
 
