@@ -279,9 +279,15 @@ Optional. Value to use as this when executing callback.
 
 ```javascript
 let arr = [1, 2, 3, 4, 5]
-let func = (data, ele) => {
-  if (ele > 1) return data
+
+let myFunc = () => {
+  return arr.filter( (data) => {
+    if (data > 1) return data
+  } )
 }
+
+myFunc()
+});
 ```
 
-> Output is [2, 3, 4, 5]
+> Output is [3, 4, 5]
