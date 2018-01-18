@@ -295,3 +295,34 @@ myFunc()
 ```
 
 > Output is [2, 3, 4, 5]
+
+### Knex Migrate
+
+```
+> knex migrate:make create_onetable_and_another_table
+```
+
+### Knex Seed
+
+```
+> knex seed:make 01_base_table
+> knex seed:make 02_dependant_table
+```
+
+### Knex Deploy
+
+If never have done before
+```
+> knex migrate:latest
+```
+
+If have done before
+```
+> knex migrate:rollback
+> knex migrate:latest
+```
+
+Then seed
+```
+> knex seed:run
+```
