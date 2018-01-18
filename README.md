@@ -326,3 +326,18 @@ Then seed
 ```
 > knex seed:run
 ```
+
+### EJS
+
+At the where an app.use goes
+```
+app.set('view engine', 'ejs');
+```
+
+Logic
+```
+// The tag below is used for logic. Such as if statements or for loops.
+<% %>
+// The tag below is used for displaying information to the user. Use this if you want to display a variable on the page.
+<%= %>
+```
