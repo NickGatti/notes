@@ -1,9 +1,36 @@
 # Notes and Daily Commits
 
+## CDNS
 
-jQuery CDN
+Materialize:
+
+```
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+```
+
+Materialize => NPM
+
+```
+npm install materialize-css
+```
+
+jQuery CDN:
+
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+https://code.jquery.com/
+```
+
+Other notable resources:
+
+```
+https://reactstrap.github.io/
+https://bootswatch.com/
+http://www.material-ui.com/#/
+https://fontawesome.com/
 ```
 
 ### Closure Javascript
@@ -61,7 +88,7 @@ let theArray []
 if (Array.isArray(theArray)) return true
 ```
 
-### What the callback? Keep callin'
+### What the callback? Keep callin' (server heavy) THIS IS KNOWN AS LONG POLLING
 ```javascript
 var xhr = new XMLHttpRequest()
 xhr.addEventListener( 'load', callback )
@@ -79,7 +106,7 @@ function callback() {
 }
 ```
 
-### What the callback? Keep callin' -MINUS SPAM
+### What the callback? Keep callin' (minus server spam) THIS IS KNOWN AS SHORT POLLING
 ```javascript
 
 var xhr = new XMLHttpRequest()
